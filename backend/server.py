@@ -221,9 +221,15 @@ async def timeout_watcher():
             GAMES.pop(code, None)
 
 @asynccontextmanager
+async def start_bot():
+    from bot import main
+    await main()
+
+@asynccontextmanager
 async def lifespan(app: FastAPI):
     log.info("Сервер запускается...")
     asyncio.create_task(timeout_watcher())
+    asyncio.create_task(start_bot())
     yield
     mongo_client.close()
 
