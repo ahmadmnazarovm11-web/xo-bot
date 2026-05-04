@@ -220,7 +220,6 @@ async def timeout_watcher():
         for code in to_delete:
             GAMES.pop(code, None)
 
-@asynccontextmanager
 async def start_bot():
     from bot import main
     await main()
