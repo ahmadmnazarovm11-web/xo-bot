@@ -543,15 +543,3 @@ async def finish_game(game: Game):
         for p in game.players:
             if p["user_id"] != "AI_BOT":
                 await db.users.update_one({"id": p["user_id"]}, {"$inc": {"draws": 1, "coins": game.bet}})
-# ─── ЗАПУСК БОТА ───
-import asyncio
-import threading
-
-def run_bot():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    from bot import main
-    loop.run_until_complete(main())
-
-bot_thread = threading.Thread(target=run_bot, daemon=True)
-bot_thread.start()
