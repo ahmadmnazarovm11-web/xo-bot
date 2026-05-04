@@ -1,4 +1,4 @@
-const BASE = "https://xo-bot-backend.onrender.com";
+const BASE = "https://impacts-abstract-ranch-centered.trycloudflare.com";
 
 async function req(method, path, body) {
   const res = await fetch(`${BASE}${path}`, {

@@ -4,7 +4,7 @@ import { useApp } from "../App";
 import { haptic } from "../lib/telegram";
 import api from "../lib/api";
 
-const WS_BASE = "wss://xo-bot-backend.onrender.com";
+const WS_BASE = "wss://impacts-abstract-ranch-centered.trycloudflare.com";
 
 function XSymbol({ size = 40, animated = false }) {
   return (
