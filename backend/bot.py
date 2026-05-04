@@ -92,7 +92,7 @@ async def main():
         await msg.answer(text, reply_markup=make_keyboard(), parse_mode="HTML")
 
     log.info("Бот запущен! Нажми Ctrl+C чтобы остановить.")
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, handle_signals=False)
 
 
 if __name__ == "__main__":
