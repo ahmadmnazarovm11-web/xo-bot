@@ -53,7 +53,8 @@ async def main():
         log.error("WEB_APP_URL не задан в .env файле!")
         return
 
-    bot = Bot(token=TOKEN)
+   bot = Bot(token=TOKEN)
+    await bot.delete_webhook(drop_pending_updates=True)
     dp = Dispatcher()
 
     @dp.message(CommandStart(deep_link=True))

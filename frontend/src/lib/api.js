@@ -1,4 +1,4 @@
-const BASE = "https://identifying-biggest-coffee-exclusively.trycloudflare.com";
+const BASE = "https://xo-bot-backend.onrender.com";
 
 async function req(method, path, body) {
   const res = await fetch(`${BASE}${path}`, {
